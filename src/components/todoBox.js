@@ -1,4 +1,4 @@
-const TodoBox=({id, todoText, deletfunction})=>{
+const TodoBox=({id, todoText, deletfunction , setEditFlag})=>{
 
 return(
 
@@ -7,7 +7,7 @@ return(
 <p>{todoText}</p>
 
 <button onClick={()=>deletfunction(id)}>delete</button>
-<button>edit</button>
+<button onClick={()=>setEditFlag({editMode:true , todoId: id})}>edit</button>
 
 
 
